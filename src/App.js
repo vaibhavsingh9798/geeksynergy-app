@@ -1,10 +1,26 @@
-
+import {createBrowserRouter,Routes,Route} from 'react-router-dom'
 import './App.css';
+import Signup from './components/Auth/Signup';
+import Login from './components/Auth/Login';
+import About from './components/About/About';
+import Navbar from './components/UI/Navbar';
+import MovieList from './components/Movie/MovieList';
 
 function App() {
+  
+
   return (
     <>
-    <h2 className='flex  justify-center '>Home</h2>
+    <Navbar />
+     
+       <Routes>
+        <Route path='/signup' element={  <Signup />} />
+        <Route path='/login' element={ <Login/>} />
+        <Route path='/about' element={<About />} />
+        <Route path='/movies' element={ <MovieList />} />
+       </Routes>
+       
+      
     </>
   );
 }
