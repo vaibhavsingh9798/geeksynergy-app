@@ -20,7 +20,7 @@ const MovieCard = ({movie}) =>{
 
 
                <div>
-                <img src={movie.poster} alt="poster" className="  w-20   h-28 rounded-md "/>
+                <img src={movie.poster} alt="poster" className="  w-20     h-36 rounded-md "/>
                </div>
 
                <div>
