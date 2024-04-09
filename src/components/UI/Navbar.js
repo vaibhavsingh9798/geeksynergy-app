@@ -12,6 +12,7 @@ const Navbar = () =>{
         e.preventDefault();
        if(isLogin){
             localStorage.setItem('isLogin','false')
+            setIsLogin(false)
             navigate('/login')
        }else{
         navigate('/login')
@@ -30,10 +31,10 @@ const Navbar = () =>{
         <div class="bg-gray-700 text-gray-300 p-4"> 
     <div class="container mx-auto flex justify-between items-center">
         <div>
-    {isLogin &&   <NavLink to='/'>Home</NavLink> }
+    {isLogin &&   <NavLink to='/movies'>Movies</NavLink> }
         </div>
         <div>
-    {isLogin &&   <NavLink to='/about'>About</NavLink> }
+    {isLogin &&   <NavLink to='/about'> Company Info </NavLink> }
         </div>
    
   

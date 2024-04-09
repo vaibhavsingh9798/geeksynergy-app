@@ -20,8 +20,9 @@ const handleChange = (e) =>{
      if(user.name && user.password){
        let savedUser =  JSON.parse(localStorage.getItem('user'))
        if((savedUser.name === user.name) && (savedUser.password === user.password)){
-        localStorage.setItem('isLogin','true')
+        localStorage.setItem('isLogin','true')   
         navigate('/movies')
+        window.location.reload(); // we can avoid this logic using global state with context or redux 
        }else{
         setError('Invalid username or password.')
        }
