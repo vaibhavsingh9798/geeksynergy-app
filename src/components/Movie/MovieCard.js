@@ -13,7 +13,7 @@ const MovieCard = ({movie}) =>{
 
               <div className="flex flex-col  justify-around">
                <div> <img src="https://cdn-icons-png.flaticon.com/128/14984/14984219.png" alt="Up"  width={25} height={25} /></div>
-               <div className="ml-2">  <h1>1</h1> </div>
+               <div className="ml-2">  <h1>{movie.totalVoted}</h1> </div>
                <div> <img src="https://cdn-icons-png.flaticon.com/128/25/25224.png" alt="Down" width={25} height={25} /></div>
                <div> <p>Votes</p> </div>
                </div>

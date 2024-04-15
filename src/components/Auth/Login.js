@@ -19,6 +19,12 @@ const handleChange = (e) =>{
     e.preventDefault();
      if(user.name && user.password){
        let savedUser =  JSON.parse(localStorage.getItem('user'))
+
+       if(!savedUser){
+        setError('Invalid credentials.')
+        setUser({name:'',phoneNumber:'',email:'',password:''})
+        return;
+       }
        if((savedUser.name === user.name) && (savedUser.password === user.password)){
         localStorage.setItem('isLogin','true')   
         navigate('/movies')
